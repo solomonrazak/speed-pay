@@ -5,6 +5,7 @@ import {Route, Routes, Link} from 'react-router-dom';
 import AdminLogin from './AdminLogin';
 import ImplantLogin from './ImplantLogin';
 import Home from './Home'
+import AdminPage from './AdminPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<Home />}/>
       <Route path="/adminlogin" element={<AdminLogin />}/>
       <Route path="/implantlogin" element={<ImplantLogin />}/>
+      <Route path="/adminpage" element={<AdminPage />}/>
       
     </Routes>
    </div>

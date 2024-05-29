@@ -8,7 +8,7 @@ function Home() {
   const [count, setCount] = useState(0)
 
   return (
-   <div className='w-screen flex flex-col items-center mt-9'>
+   <div className='w-screen flex flex-col items-center mt-9 min-h-full'>
     <div className='flex flex-col mt-10 text-center gap-4 mb-9'>
     <h1 className='text-[27px] font-bold'>Welcome to Speedpay App</h1>
     <h2 className='text-[18px] font-medium'>Choose Login Options</h2>

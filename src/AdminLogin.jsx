@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import { IoIosEyeOff } from "react-icons/io";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AdminLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
     
     //email input handler
     const handleEmail = (e) => {
@@ -23,6 +25,7 @@ const AdminLogin = () => {
         console.log('password', password)
         setEmail("");
         setPassword("")
+        navigate("/adminpage");
 
     }
 
