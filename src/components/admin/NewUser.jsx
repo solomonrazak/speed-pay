@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
-
 import { Link, useNavigate } from "react-router-dom";
 import Vector from "../../assets/images/Vector.png";
 import { animals } from "../../data";
@@ -18,7 +16,6 @@ import {
 const NewUser = () => {
   const [showSummary, setShowSummary] = useState(false);
   const [showForm, setShowForm] = useState(true);
-  const [showSuccess, setShowSuccess] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [formData, setFormData] = useState({
     select1: "",
@@ -55,41 +52,37 @@ const NewUser = () => {
         <form onSubmit={sendForm}>
           <div className="flex justify-center">
             <div className="grid grid-cols-2 grid-rows-3 gap-3">
-            <Select
-             label="Access"
-             placeholder="Select an item"
-             defaultSelectedKeys={["cat"]}
-             className="max-w-xs bg-white text-black"
-             variant="bordered"
-             radius="none">
-      
-     
-      {animals.map((animal) => (
-        <SelectItem key={animal.key}>
-          {animal.label}
-        </SelectItem>
-      ))}
-    </Select>
-              <div className="relative">
-                <select
-                  className="w-[20em] h-10 appearance-none pl-2 pr-8"
-                  name="select2"
-                  value={formData.select2}
-                  onChange={handleInputChange}
-                >
-                  <option value="">Select</option>
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                </select>
-                <MdKeyboardArrowDown className="absolute top-3 right-2 pointer-events-none" />
-              </div>
+              <Select
+                label="Access"
+                placeholder="Select an item"
+                defaultSelectedKeys={["cat"]}
+                className="max-w-xs bg-white text-black"
+                variant="bordered"
+                radius="none"
+              >
+                {animals.map((animal) => (
+                  <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                ))}
+              </Select>
+              <Select
+                label="Access"
+                placeholder="Select an item"
+                defaultSelectedKeys={["cat"]}
+                className="bg-white text-black"
+                variant="bordered"
+                radius="none"
+              >
+                {animals.map((animal) => (
+                  <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                ))}
+              </Select>
+
               <Input
                 type="text"
                 label="SurName"
                 variant="bordered"
                 defaultValue="Solomon"
-                className="max-w-xs bg-white"
+                className=" bg-white"
                 radius="none"
               />
 
@@ -98,7 +91,7 @@ const NewUser = () => {
                 label="First Name"
                 variant="bordered"
                 defaultValue="Razak"
-                className="max-w-xs bg-white"
+                className=" bg-white"
                 radius="none"
               />
               <Input
@@ -106,7 +99,7 @@ const NewUser = () => {
                 label="Email"
                 variant="bordered"
                 defaultValue="solomonrazak99@gmail.com"
-                className="max-w-xs bg-white rounded-lg"
+                className=" bg-white rounded-lg"
                 radius="none"
               />
               <Input
@@ -115,7 +108,7 @@ const NewUser = () => {
                 radius="none"
                 variant="bordered"
                 defaultValue="000 000 000"
-                className="max-w-xs bg-white"
+                className="w-[300px] bg-white"
               />
             </div>
           </div>

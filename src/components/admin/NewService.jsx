@@ -3,12 +3,9 @@ import Vector from "../../assets/images/Vector.png";
 import { animals } from "../../data";
 
 import {
-  
   Modal,
   ModalContent,
- 
   ModalBody,
-  
   Button,
   useDisclosure,
   Select,
@@ -19,73 +16,75 @@ const NewService = () => {
   const [showSummary, setShowSummary] = useState(false);
   const [showForm, setShowForm] = useState(true);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  
 
   return (
     <div className="border border-gray-500 p-3">
       <h1 className="text-center mb-5">Add New User</h1>
-      <p className="text-[11px] text-center mt-[-15px] mb-4">Kindly Enter or uplaod Details</p>
-      {showForm && 
-      <form>
-        <div className="flex justify-center">
-          <div className="grid grid-cols-2 grid-rows-2 gap-3">
-            <Select
-              label="Department"
-              placeholder="Select an item"
-              defaultSelectedKeys={["cat"]}
-              className="bg-white text-black"
-              variant="bordered"
-              radius="none"
-            >
-              {animals.map((animal) => (
-                <SelectItem key={animal.key}>{animal.label}</SelectItem>
-              ))}
-            </Select>
+      <p className="text-[11px] text-center mt-[-15px] mb-4">
+        Kindly Enter or uplaod Details
+      </p>
+      {showForm && (
+        <form>
+          <div className="flex justify-center">
+            <div className="grid grid-cols-2 grid-rows-2 gap-3">
+              <Select
+                label="Department"
+                placeholder="Select an item"
+                defaultSelectedKeys={["cat"]}
+                className="bg-white text-black"
+                variant="bordered"
+                radius="none"
+              >
+                {animals.map((animal) => (
+                  <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                ))}
+              </Select>
 
-            <Select
-              label="Categories"
-              placeholder="Select an item"
-              defaultSelectedKeys={["cat"]}
-              className="w-[300px] bg-white text-black"
-              variant="bordered"
-              radius="none"
-            >
-              {animals.map((animal) => (
-                <SelectItem key={animal.key}>{animal.label}</SelectItem>
-              ))}
-            </Select>
+              <Select
+                label="Categories"
+                placeholder="Select an item"
+                defaultSelectedKeys={["cat"]}
+                className="w-[300px] bg-white text-black"
+                variant="bordered"
+                radius="none"
+              >
+                {animals.map((animal) => (
+                  <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                ))}
+              </Select>
 
-            <Select
-              label="Services"
-              placeholder="Select an item"
-              defaultSelectedKeys={["cat"]}
-              className="bg-white text-black"
-              variant="bordered"
-              radius="none"
-            >
-              {animals.map((animal) => (
-                <SelectItem key={animal.key}>{animal.label}</SelectItem>
-              ))}
-            </Select>
-            <Select
-              label="Fees"
-              placeholder="Select an item"
-              defaultSelectedKeys={["cat"]}
-              className="bg-white text-black"
-              variant="bordered"
-              radius="none"
-            >
-              {animals.map((animal) => (
-                <SelectItem key={animal.key}>{animal.label}</SelectItem>
-              ))}
-            </Select>
+              <Select
+                label="Services"
+                placeholder="Select an item"
+                defaultSelectedKeys={["cat"]}
+                className="bg-white text-black"
+                variant="bordered"
+                radius="none"
+              >
+                {animals.map((animal) => (
+                  <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                ))}
+              </Select>
+              <Select
+                label="Fees"
+                placeholder="Select an item"
+                defaultSelectedKeys={["cat"]}
+                className="bg-white text-black"
+                variant="bordered"
+                radius="none"
+              >
+                {animals.map((animal) => (
+                  <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                ))}
+              </Select>
+            </div>
           </div>
-          
-        </div>
-        <p className="text-center underline font-light mt-4">Generate Template</p>
+          <p className="text-center underline font-light mt-4">
+            Generate Template
+          </p>
           <p className="text-center underline font-light">Upload</p>
           <div className="flex justify-center">
-          <button
+            <button
               className="bg-slate-900 text-white px-[5rem] py-1 rounded-md mt-5"
               type="submit"
               onClick={() => {
@@ -96,9 +95,8 @@ const NewService = () => {
               Continue
             </button>
           </div>
-          
-      </form>
-}
+        </form>
+      )}
       {/* Summary */}
       {showSummary && (
         <div>
