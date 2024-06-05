@@ -6,6 +6,7 @@ import AdminLogin from './AdminLogin';
 import ImplantLogin from './ImplantLogin';
 import Home from './Home'
 import AdminPage from './AdminPage';
+import AdminLayout from './layout/AdminLayout';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <Route path="/" element={<Home />}/>
       <Route path="/adminlogin" element={<AdminLogin />}/>
       <Route path="/implantlogin" element={<ImplantLogin />}/>
-      <Route path="/adminpage" element={<AdminPage />}/>
+      <Route path="/adminpage" element={<AdminLayout />}><Route path="" element={<AdminPage />}/></Route>
       
     </Routes>
    </div>

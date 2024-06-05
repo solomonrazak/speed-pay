@@ -27,7 +27,7 @@ const AdminPage = () => {
   };
 
   return (
-    <div className="w-screen bg-gray-100 h-screen min-h-full">
+    <div className="w-full bg-gray-100 h-full min-h-full">
       <div className="flex p-7">
         {/* Side bar */}
         <div className="w-[20%] px-6">
