@@ -30,11 +30,11 @@ const centerTextPlugin = {
 
 const options = {
   layout: {
-    padding: 0 // Remove padding around the chart
+    padding: 0 
   },
   plugins: {
     legend: {
-      display: false // Hides the legend labels
+      display: false 
     },
     tooltip: {
       callbacks: {
@@ -55,8 +55,8 @@ const data = {
   datasets: [{
     data: [81,19],
     backgroundColor: [
-      'rgb(0, 197, 0)',
-      'rgb(204, 223, 243)'
+      'rgb(255, 204, 0)', 
+      'rgb(255, 255, 224)'
     ],
     borderWidth: 2,
     radius: '10%'   

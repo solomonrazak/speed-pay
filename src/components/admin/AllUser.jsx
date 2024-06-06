@@ -25,7 +25,7 @@ export default function AllUser() {
             <td className="px-6 py-2">DOE</td>
             <td className="px-6 py-2">doe@gmail.com</td>
             <td className="px-6 py-2">000 000 000</td>
-            <td className="px-6 py-2">Viewer</td>
+            <td className="px-6 py-2">Inputter</td>
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
@@ -36,7 +36,7 @@ export default function AllUser() {
             <td className="px-6 py-2">DOE</td>
             <td className="px-6 py-2">doe@gmail.com</td>
             <td className="px-6 py-2">000 000 000</td>
-            <td className="px-6 py-2">Viewer</td>
+            <td className="px-6 py-2">Inputter</td>
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
@@ -46,7 +46,7 @@ export default function AllUser() {
             <td className="px-6 py-2">DOE</td>
             <td className="px-6 py-2">doe@gmail.com</td>
             <td className="px-6 py-2">000 000 000</td>
-            <td className="px-6 py-2">Viewer</td>
+            <td className="px-6 py-2">Inputter</td>
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
@@ -56,7 +56,7 @@ export default function AllUser() {
             <td className="px-6 py-2">DOE</td>
             <td className="px-6 py-2">doe@gmail.com</td>
             <td className="px-6 py-2">000 000 000</td>
-            <td className="px-6 py-2">Viewer</td>
+            <td className="px-6 py-2">Inputter</td>
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
@@ -66,7 +66,7 @@ export default function AllUser() {
             <td className="px-6 py-2">DOE</td>
             <td className="px-6 py-2">doe@gmail.com</td>
             <td className="px-6 py-2">000 000 000</td>
-            <td className="px-6 py-2">Viewer</td>
+            <td className="px-6 py-2">Inputter</td>
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
@@ -76,7 +76,7 @@ export default function AllUser() {
             <td className="px-6 py-2">DOE</td>
             <td className="px-6 py-2">doe@gmail.com</td>
             <td className="px-6 py-2">000 000 000</td>
-            <td className="px-6 py-2">Viewer</td>
+            <td className="px-6 py-2">Inputter</td>
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
@@ -86,7 +86,7 @@ export default function AllUser() {
             <td className="px-6 py-2">DOE</td>
             <td className="px-6 py-2">doe@gmail.com</td>
             <td className="px-6 py-2">000 000 000</td>
-            <td className="px-6 py-2">Viewer</td>
+            <td className="px-6 py-2">Inputter</td>
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
@@ -96,7 +96,7 @@ export default function AllUser() {
             <td className="px-6 py-2">DOE</td>
             <td className="px-6 py-2">doe@gmail.com</td>
             <td className="px-6 py-2">000 000 000</td>
-            <td className="px-6 py-2">Viewer</td>
+            <td className="px-6 py-2">Inputter</td>
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
@@ -106,7 +106,7 @@ export default function AllUser() {
             <td className="px-6 py-2">DOE</td>
             <td className="px-6 py-2">doe@gmail.com</td>
             <td className="px-6 py-2">000 000 000</td>
-            <td className="px-6 py-2">Viewer</td>
+            <td className="px-6 py-2">Inputter</td>
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>

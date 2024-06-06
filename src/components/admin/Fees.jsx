@@ -8,12 +8,12 @@ export default function Fees() {
       <table className="w-full">
         <thead className="bg-gray-300 text-[10px]">
           <tr>
-            <th className="px-6 py-3 rounded-l-lg font-normal">Date Created</th>
-            <th className="px-6 py-3 font-normal">FIRST NAME</th>
-            <th className="px-6 py-3 font-normal">SURNAME</th>
-            <th className="px-6 py-3 font-normal">EMAIL ADDRESS</th>
-            <th className="px-6 py-3 font-normal">PHONE NUMBER</th>
-            <th className="px-6 py-3 font-normal">ACCESS</th>
+          <th className="px-6 py-3 rounded-l-lg font-normal">DATE CREATED</th>
+            <th className="px-6 py-3 font-normal">SERVICE ID</th>
+            <th className="px-6 py-3 font-normal">SERVICE</th>
+            <th className="px-6 py-3 font-normal">DESCRIPTION</th>
+            <th className="px-6 py-3 font-normal">CREATED BY</th>
+            <th className="px-6 py-3 font-normal">PRICE</th>
             <th className="px-6 py-3 font-normal">DEPARTMENT</th>
             <th className="px-6 py-3 rounded-r-lg "></th>
           </tr>

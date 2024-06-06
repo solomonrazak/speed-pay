@@ -57,20 +57,20 @@ const Overview = () => {
             </div>
         </div>
       </div>
-      {/* <div className="flex">
+       <div className="flex">
         <div className="p-0">
+        <DoughnutDataOne />
+        <p>Total Transaction</p>          
+        </div>
+        {/* <div className="p-0">
         <DoughnutDataOne />
         <p>Total Transaction</p>          
         </div>
         <div className="p-0">
         <DoughnutDataOne />
         <p>Total Transaction</p>          
-        </div>
-        <div className="p-0">
-        <DoughnutDataOne />
-        <p>Total Transaction</p>          
-        </div>
-      </div> */}
+        </div> */}
+      </div> 
        
     </div>
   )
