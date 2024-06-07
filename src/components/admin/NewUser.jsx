@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Vector from "../../assets/images/Vector.png";
 import { animals } from "../../data";
 import {
@@ -18,15 +18,15 @@ const NewUser = () => {
   const [showForm, setShowForm] = useState(true);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [formData, setFormData] = useState({
-    select1: "",
-    select2: "",
-    input3: "",
-    input4: "",
-    input5: "",
-    input6: "",
+    select1: "cat",
+    select2: "cat",
+    input3: "Solomon",
+    input4: "Razak",
+    input5: "jane@gmail.com",
+    input6: "000 000 000",
   });
 
-  // function to handle changes in input
+  // Function to handle changes in input
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -35,16 +35,27 @@ const NewUser = () => {
     });
   };
 
-  // form submit
+  // Function to handle changes in select
+  const handleSelectChange = (name, value) => {
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Form submit
   const sendForm = (e) => {
     e.preventDefault();
-    console.log("form submitted");
+    setShowForm(false);
+    setShowSummary(true);
   };
+
   const navigate = useNavigate();
 
-  function goBack() {
-    navigate("/adminlogin");
-  }
+  const goToDashboard = () => {
+    navigate("/adminpage");
+  };
+
   return (
     <div className="border border-gray-500 p-3">
       <h1 className="text-center mb-5">Add New User</h1>
@@ -52,63 +63,79 @@ const NewUser = () => {
         <form onSubmit={sendForm}>
           <div className="flex justify-center">
             <div className="grid grid-cols-2 grid-rows-3 gap-3">
-              <Select
+            <Select
                 label="Access"
                 placeholder="Select an item"
-                defaultSelectedKeys={["cat"]}
                 className="max-w-xs bg-white text-black"
                 variant="bordered"
                 radius="none"
+                selectedKeys={new Set([formData.select1])}
+                onSelectionChange={(key) => handleSelectChange("select1", key.currentKey)}
               >
                 {animals.map((animal) => (
-                  <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                  <SelectItem key={animal.key} value={animal.key}>
+                    {animal.label}
+                  </SelectItem>
                 ))}
               </Select>
               <Select
-                label="Access"
+                label="Department"
                 placeholder="Select an item"
-                defaultSelectedKeys={["cat"]}
                 className="bg-white text-black"
                 variant="bordered"
                 radius="none"
+                selectedKeys={new Set([formData.select2])}
+                onSelectionChange={(key) => handleSelectChange("select2", key.currentKey)}
               >
                 {animals.map((animal) => (
-                  <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                  <SelectItem key={animal.key} value={animal.key}>
+                    {animal.label}
+                  </SelectItem>
                 ))}
               </Select>
-
               <Input
                 type="text"
                 label="SurName"
                 variant="bordered"
-                defaultValue="Solomon"
-                className=" bg-white"
+                defaultValue={formData.input3}
+                value={formData.input3}
+                name="input3"
+                onChange={handleInputChange}
+                className="bg-white"
                 radius="none"
               />
-
               <Input
                 type="text"
                 label="First Name"
                 variant="bordered"
-                defaultValue="Razak"
-                className=" bg-white"
+                defaultValue={formData.input4}
+                value={formData.input4}
+                name="input4"
+                onChange={handleInputChange}
+                className="bg-white"
                 radius="none"
               />
               <Input
                 type="email"
                 label="Email"
                 variant="bordered"
-                defaultValue="solomonrazak99@gmail.com"
-                className=" bg-white rounded-lg"
+                defaultValue={formData.input5}
+                value={formData.input5}
+                name="input5"
+                onChange={handleInputChange}
+                className="bg-white rounded-lg"
                 radius="none"
               />
               <Input
                 type="text"
                 label="Phone Number"
-                radius="none"
                 variant="bordered"
-                defaultValue="000 000 000"
+                defaultValue={formData.input6}
+                value={formData.input6}
+                name="input6"
+                onChange={handleInputChange}
                 className="w-[300px] bg-white"
+                radius="none"
               />
             </div>
           </div>
@@ -116,10 +143,6 @@ const NewUser = () => {
             <button
               className="bg-slate-900 text-white px-[5rem] py-1 rounded-md mt-5"
               type="submit"
-              onClick={() => {
-                setShowForm(false);
-                setShowSummary(true);
-              }}
             >
               Continue
             </button>
@@ -142,11 +165,11 @@ const NewUser = () => {
               </div>
               <div>
                 <p className="text-gray-500">First Name</p>
-                <p>{formData.input3}</p>
+                <p>{formData.input4}</p>
               </div>
               <div>
                 <p className="text-gray-500">Surname</p>
-                <p>{formData.input4}</p>
+                <p>{formData.input3}</p>
               </div>
               <div>
                 <p className="text-gray-500">Email Address</p>
@@ -196,23 +219,28 @@ const NewUser = () => {
                     <p className="text-center font-thin mt-[-10px] mb-5">
                       Service added Successfully
                     </p>
-                    <button className="bg-slate-900 text-white p-1">
+                    <button className="bg-slate-900 text-white p-1" onClick={goToDashboard}>
                       Go back To Dashboard
                     </button>
                   </ModalBody>
                 </>
               </ModalContent>
             </Modal>
-            <button className="bg-slate-900 text-white px-10 rounded-md">
+            <button
+              className="bg-slate-900 text-white px-10 rounded-md"
+              onClick={() => {
+                setShowSummary(false);
+                setShowForm(true);
+              }}
+            >
               No
             </button>
           </div>
         </div>
       )}
-
-      {/* Success */}
     </div>
   );
 };
 
 export default NewUser;
+

@@ -9,7 +9,7 @@ import Failed from './Failed';
 import Success from './Success';
 
 const Reports = () => {
-  const [activeTab, setActiveTab] = useState('allUser');
+  const [activeTab, setActiveTab] = useState('alltransaction');
 
   const renderComponent = () => {
     switch (activeTab) {

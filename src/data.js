@@ -1,10 +1,8 @@
 import React from "react";
 export const animals = [
   {key: "select", label: "Select"},
-  {key: "dog", label: "Dog"},
-  {key: "elephant", label: "Elephant"},
-  {key: "lion", label: "Lion"},
-  {key: "tiger", label: "Tiger"},
-  {key: "giraffe", label: "Giraffe"},
+  {key: "Dept 1", label: "Dept 1"},
+  {key: "Dept 2", label: "Dept 2"},
+  {key: "DEpt 3", label: "Dept 3"},
 
 ];
