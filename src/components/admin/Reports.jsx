@@ -25,7 +25,7 @@ const Reports = () => {
   };
   return (
     <div className="border-1 border-black rounded-md p-3">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center gap-5">
         <div>
         <Input
         isClearable

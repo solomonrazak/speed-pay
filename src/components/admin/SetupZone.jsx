@@ -6,7 +6,7 @@ const SetupZone = () => {
     const [disPlayForm, setDisplayForm] = useState(false);
     const [activeLink, setActiveLink] = useState('newUser');
   return (
-    <div>
+    <div className='flex justify-center w-full ml-[6rem]'>
         <div>
             <ul className="flex gap-2">
                 <li className={`cursor-pointer border-1 border-black rounded-tr-lg rounded-tl-lg border-b-0 px-3 ${activeLink === "newUser" ? "bg-gradient-to-t from-transparent to-orange-200 border-orange-400 border-2 font-normal" : ""}`} onClick={() => setActiveLink('newUser')}>New User</li>

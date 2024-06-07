@@ -6,7 +6,7 @@ import AdminLogin from './AdminLogin';
 import ImplantLogin from './ImplantLogin';
 import Home from './Home'
 import AdminPage from './AdminPage';
-import AdminLayout from './layout/AdminLayout';
+
 import TellOverview from './components/teller/TellOverview';
 import Payments from './components/teller/Payments';
 import Generator from './components/teller/Generator';
@@ -28,19 +28,24 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/adminlogin" element={<AdminLogin />}/>
-      <Route path="/overview" element={<Overview />} />
-          <Route path="/setup-zone" element={<SetupZone />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/reports" element={<Reports />} />
-          <Route path="/profile" element={<Profile />} />
       <Route path="/implantlogin" element={<ImplantLogin />}/>
-      <Route path="/teller-page" element={<TellerPage />}/>
-      <Route path="/tell-overview" element={<TellOverview />}/>
-      <Route path="/payments" element={<Payments />}/>
-      <Route path="/generator" element={<Generator />}/>
-      <Route path="/tell-reports" element={<TellReports />}/>
-      <Route path="/tell-profile" element={<TellProfile />}/>
-      <Route path="/adminpage" element={<AdminLayout />}><Route path="" element={<AdminPage />}/></Route>
+
+      <Route path="/adminpage" element={<AdminPage />}>
+        <Route path="overview" element={<Overview />} />
+        <Route path="setup-zone" element={<SetupZone />} />
+        <Route path="services" element={<Services />} />
+        <Route path="reports" element={<Reports />} />
+        <Route path="profile" element={<Profile />} />
+      </Route>
+      
+      <Route path="/teller-page" element={<TellerPage />}>
+          <Route path="tell-overview" element={<TellOverview />} />
+          <Route path="payments" element={<Payments />} />
+          <Route path="generator" element={<Generator />} />
+          <Route path="tell-reports" element={<TellReports />} />
+          <Route path="tell-profile" element={<TellProfile />} />
+        </Route>
+      
       
     </Routes>
    </div>

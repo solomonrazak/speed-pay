@@ -1,121 +1,89 @@
-import React, { useState } from "react";
+
+import React from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import razzy from "./assets/images/razzy.jpg";
-import Overview from "./components/admin/Overview";
-import SetupZone from "./components/admin/SetupZone";
-import Services from "./components/admin/Services";
-import Reports from "./components/admin/Reports";
-import Profile from "./components/admin/Profile";
 
 const AdminPage = () => {
-  const [activeComponent, setActiveComponent] = useState("Overview");
-
-  const renderComponent = () => {
-    switch (activeComponent) {
-      case "Overview":
-        return <Overview />;
-      case "SetupZone":
-        return <SetupZone />;
-      case "Services":
-        return <Services />;
-      case "Reports":
-        return <Reports />;
-      case "Profile":
-        return <Profile />;
-      default:
-        return <Overview />;
-    }
-  };
+  const location = useLocation();
+  
+  const isActive = (path) => location.pathname === `/adminpage/${path}`;
 
   return (
-    <div className="w-full bg-gray-100 h-full min-h-full">
-      <div className="flex p-7">
-        {/* Side bar */}
-        <div className="w-[20%] px-6">
-          <h1 className="text-2xl font-medium mb-8 text-center">SpeedPay</h1>
-          <div className="ml-[-10px] flex flex-col items-center mb-5">
-            <div className="rounded-full">
-              <img
-                src={razzy}
-                alt="admin-image"
-                width={50}
-                height={70}
-                className="rounded-full border-2 border-white"
-              />
-            </div>
-            <h1 className="text-slate-900 font-medium">Solomon Razak</h1>
-            <p className="font-thin text-[12px]">Admin</p>
+    <main className="grid grid-cols-4 bg-gray-100">
+      <aside className="col-span-1 h-screen bg-gray-200 p-5">
+        <h1 className="text-2xl font-medium mb-8 text-center">SpeedPay</h1>
+        <div className="ml-[-10px] flex flex-col items-center mb-5">
+          <div className="rounded-full">
+            <img
+              src={razzy}
+              alt="admin-image"
+              width={50}
+              height={70}
+              className="rounded-full border-2 border-white"
+            />
           </div>
-          <div className="flex justify-center">
-            <ul className="flex flex-col gap-2">
-              <li
-                className={`px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
-                  activeComponent === "Overview"
-                    ? "bg-gray-400 text-slate-900 font-medium"
-                    : ""
-                }`}
-                onClick={() => setActiveComponent("Overview")}
-              >
-                Overview
-              </li>
-              <li
-                className={`hover:bg-gray-400 hover:text-slate-900 hover:font-medium px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
-                  activeComponent === "SetupZone"
-                    ? "bg-gray-400 text-slate-900 font-medium"
-                    : ""
-                }`}
-                onClick={() => setActiveComponent("SetupZone")}
-              >
-                Set up Zone
-              </li>
-              <li
-                className={`px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
-                  activeComponent === "Services"
-                    ? "bg-gray-400 text-slate-900 font-medium"
-                    : ""
-                }`}
-                onClick={() => setActiveComponent("Services")}
-              >
-                Services
-              </li>
-              <li
-                className={`px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
-                  activeComponent === "Reports"
-                    ? "bg-gray-400 text-slate-900 font-medium"
-                    : ""
-                }`}
-                onClick={() => setActiveComponent("Reports")}
-              >
-                Reports
-              </li>
-              <li
-                className={`px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
-                  activeComponent === "Profile"
-                    ? "bg-gray-400 text-slate-900 font-medium"
-                    : ""
-                }`}
-                onClick={() => setActiveComponent("Profile")}
-              >
-                Profile
-              </li>
-            </ul>
-          </div>
+          <h1 className="text-slate-900 font-medium">Solomon Razak</h1>
+          <p className="font-thin text-[12px]">Admin</p>
         </div>
-        {/* vertical line */}
-        <div className="bg-gray-400 w-[0.8px] h-[30rem]"></div>
-        {/* main section */}
-        <div className="w-[80%] px-8">
-          <div className="flex justify-between">
-            <h1>{activeComponent}</h1>
-            <p>Institution Name</p>
-          </div>
-          {/* render active component here */}
-          <div>{renderComponent()}</div>
+        <div className="flex justify-center">
+          <ul className="flex flex-col justify-center">
+            <li
+              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+                isActive("overview")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}
+            >
+              <Link to="overview" className="text-blue-500 block">Overview</Link>
+            </li>
+            <li
+              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+                isActive("setup-zone")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}
+            >
+              <Link to="setup-zone" className="text-blue-500 block">Set up Zone</Link>
+            </li>
+            <li
+              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+                isActive("services")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}
+            >
+              <Link to="services" className="text-blue-500 block">Services</Link>
+            </li>
+            <li
+              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+                isActive("reports")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}
+            >
+              <Link to="reports" className="text-blue-500 block">Reports</Link>
+            </li>
+            <li
+              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+                isActive("profile")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}
+            >
+              <Link to="profile" className="text-blue-500 block">Profile</Link>
+            </li>
+          </ul>
         </div>
+      </aside>
+      <div className="col-span-3 col-start-2 flex gap-3 px-7">
+        <div className="w-[1px] h-full bg-black ml-[-28px]"></div>
+        <div className="ml-7 mt-10">
+        <Outlet />
+        </div>
+        
       </div>
-    </div>
+    </main>
   );
 };
 
 export default AdminPage;
-
-

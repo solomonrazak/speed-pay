@@ -4,8 +4,8 @@ import razzy from "./assets/images/razzy.jpg";
 
 const TellerPage = () => {
   return (
-    <div className="flex">
-       <aside className="w-1/4 h-screen bg-gray-200 p-5">
+    <main className="grid grid-cols-4">
+       <aside className="col-span-1 h-screen bg-gray-200 p-5">
       <h1 className="text-2xl font-medium mb-8 text-center">SpeedPay</h1>
       <div className="ml-[-10px] flex flex-col items-center mb-5">
             <div className="rounded-full">
@@ -23,27 +23,27 @@ const TellerPage = () => {
           <div className="flex justify-center">
           <ul className="flex flex-col justify-center">
             <li className="mb-3">
-              <Link to="/tell-overview" className="text-blue-500">Overview</Link>
+              <Link to="tell-overview" className="text-blue-500">Overview</Link>
             </li>
             <li className="mb-3">
-              <Link to="/payments" className="text-blue-500">Bill Payments</Link>
+              <Link to="payments" className="text-blue-500">Bill Payments</Link>
             </li>
             <li className="mb-3">
-              <Link to="/generator" className="text-blue-500">Bill Generator</Link>
+              <Link to="generator" className="text-blue-500">Bill Generator</Link>
             </li>
             <li className="mb-3">
-              <Link to="/tell-reports" className="text-blue-500">Reports</Link>
+              <Link to="tell-reports" className="text-blue-500">Reports</Link>
             </li>
             <li className="mb-3">
-              <Link to="/tell-profile" className="text-blue-500">Profile</Link>
+              <Link to="tell-profile" className="text-blue-500">Profile</Link>
             </li>
           </ul>
           </div>
           </aside>
-          <main className="w-3/4 p-5">
+          <div className="col-span-3 col-start-2">
         <Outlet />
-      </main>
-    </div>
+      </div>
+    </main>
   )
 }
 

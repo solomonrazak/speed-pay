@@ -29,12 +29,12 @@ const ManageService = () => {
    
   return (
     <div>
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-5 items-center">
         <div>
         <Input
         isClearable
         radius="lg"
-        classNames="w-[30px] border-1 border-black"
+        classNames="w-[30px] border-1 border-black mt-3"
         placeholder="Type to search..."
         startContent={
           <SearchIcon className="text-black/50 mb-0.5 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
