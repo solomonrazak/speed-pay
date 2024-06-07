@@ -74,7 +74,7 @@ const ImplantLogin = () => {
               type={isVisible ? "text" : "password"}
               className="max-w-xs"
             />
-                <button className="text-white bg-slate-900 py-2 rounded-md" type="submit">Continue</button>
+                <button className="text-white bg-slate-900 py-2 rounded-md" type="submit"><Link to="/teller-page">Continue</Link></button>
             </form>
             <p className="text-center mt-5">Forgot my passowrd<span className="ml-1 underline text-slate-900 font-medium cursor-pointer">reset it here</span> </p>
         </div>
