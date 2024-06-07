@@ -28,7 +28,7 @@ const AdminPage = () => {
         <div className="flex justify-center">
           <ul className="flex flex-col justify-center">
             <li
-              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+              className={`mb-3 px-4 py-1 ml-[-8px] rounded-md cursor-pointer ${
                 isActive("overview")
                   ? "bg-gray-400 text-slate-900 font-medium"
                   : "hover:bg-gray-300 hover:text-slate-900"
@@ -37,7 +37,7 @@ const AdminPage = () => {
               <Link to="overview" className="text-blue-500 block">Overview</Link>
             </li>
             <li
-              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+              className={`mb-3 px-4 py-1 ml-[-8px] rounded-md cursor-pointer ${
                 isActive("setup-zone")
                   ? "bg-gray-400 text-slate-900 font-medium"
                   : "hover:bg-gray-300 hover:text-slate-900"
@@ -46,7 +46,7 @@ const AdminPage = () => {
               <Link to="setup-zone" className="text-blue-500 block">Set up Zone</Link>
             </li>
             <li
-              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+              className={`mb-3 px-4 py-1 ml-[-8px] rounded-md cursor-pointer ${
                 isActive("services")
                   ? "bg-gray-400 text-slate-900 font-medium"
                   : "hover:bg-gray-300 hover:text-slate-900"
@@ -55,7 +55,7 @@ const AdminPage = () => {
               <Link to="services" className="text-blue-500 block">Services</Link>
             </li>
             <li
-              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+              className={`mb-3 px-4 py-1 ml-[-8px] rounded-md cursor-pointer ${
                 isActive("reports")
                   ? "bg-gray-400 text-slate-900 font-medium"
                   : "hover:bg-gray-300 hover:text-slate-900"
@@ -64,7 +64,7 @@ const AdminPage = () => {
               <Link to="reports" className="text-blue-500 block">Reports</Link>
             </li>
             <li
-              className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer ${
+              className={`mb-3 px-4 py-1 ml-[-8px] rounded-md cursor-pointer ${
                 isActive("profile")
                   ? "bg-gray-400 text-slate-900 font-medium"
                   : "hover:bg-gray-300 hover:text-slate-900"

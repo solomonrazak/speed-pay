@@ -4,7 +4,7 @@ import { FaCheck } from "react-icons/fa6";
 
 const Payments = () => {
   return (
-    <div className="p-5">
+    <div className="p-5 w-full flex justify-center">
     <div className="space-y-3">
     <div className="relative">
   <Input
