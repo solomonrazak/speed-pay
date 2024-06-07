@@ -18,7 +18,7 @@ const TellerPage = () => {
               />
             </div>
             <h1 className="text-slate-900 font-medium">Solomon Razak</h1>
-            <p className="font-thin text-[12px]">Admin</p>
+            <p className="font-thin text-[12px]">Teller</p>
           </div>
           <div className="flex justify-center">
           <ul className="flex flex-col justify-center">
