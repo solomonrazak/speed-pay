@@ -15,7 +15,7 @@ export default function Viewer() {
             <th className="px-6 py-3 font-normal">PHONE NUMBER</th>
             <th className="px-6 py-3 font-normal">ACCESS</th>
             <th className="px-6 py-3 font-normal">DEPARTMENT</th>
-            <th className="px-6 py-3 rounded-r-lg "></th>
+            <th className="px-6 py-3 rounded-r-lg"></th>
           </tr>
         </thead>
         <tbody>
