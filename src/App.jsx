@@ -1,12 +1,9 @@
-import { useState } from 'react'
-
-import './App.css'
-import {Route, Routes, Link} from 'react-router-dom';
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import AdminLogin from './AdminLogin';
 import ImplantLogin from './ImplantLogin';
-import Home from './Home'
+import Home from './Home';
 import AdminPage from './AdminPage';
-
 import TellOverview from './components/teller/TellOverview';
 import Payments from './components/teller/Payments';
 import Generator from './components/teller/Generator';
@@ -18,38 +15,36 @@ import Profile from './components/admin/Profile';
 import SetupZone from './components/admin/SetupZone';
 import Services from './components/admin/Services';
 import Reports from './components/admin/Reports';
-
+import CountCash from './components/teller/CountCash'; // Import CountCash
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-   <div>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/adminlogin" element={<AdminLogin />}/>
-      <Route path="/implantlogin" element={<ImplantLogin />}/>
-
-      <Route path="/adminpage" element={<AdminPage />}>
-        <Route path="overview" element={<Overview />} />
-        <Route path="setup-zone" element={<SetupZone />} />
-        <Route path="services" element={<Services />} />
-        <Route path="reports" element={<Reports />} />
-        <Route path="profile" element={<Profile />} />
-      </Route>
-      
-      <Route path="/teller-page" element={<TellerPage />}>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
+        <Route path="/implantlogin" element={<ImplantLogin />} />
+        <Route path="/adminpage" element={<AdminPage />}>
+          <Route path="overview" element={<Overview />} />
+          <Route path="setup-zone" element={<SetupZone />} />
+          <Route path="services" element={<Services />} />
+          <Route path="reports" element={<Reports />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
+        <Route path="/teller-page" element={<TellerPage />}>
           <Route path="tell-overview" element={<TellOverview />} />
-          <Route path="payments" element={<Payments />} />
+          <Route path="payments" element={<Payments />}>
+            <Route path="cash" element={<CountCash />} /> {/* Nested route */}
+          </Route>
           <Route path="generator" element={<Generator />} />
           <Route path="tell-reports" element={<TellReports />} />
           <Route path="tell-profile" element={<TellProfile />} />
         </Route>
-      
-      
-    </Routes>
-   </div>
-  )
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;

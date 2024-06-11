@@ -15,7 +15,7 @@ export default function Forms() {
             <th className="px-6 py-3 font-normal">CREATED BY</th>
             <th className="px-6 py-3 font-normal">PRICE</th>
             <th className="px-6 py-3 font-normal">DEPARTMENT</th>
-            <th className="px-6 py-3 rounded-r-lg "></th>
+            <th className="px-6 py-3 rounded-r-lg"></th>
           </tr>
         </thead>
         <tbody>

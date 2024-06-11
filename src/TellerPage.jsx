@@ -40,7 +40,7 @@ const TellerPage = () => {
           </ul>
           </div>
           </aside>
-          <div className="col-span-3 col-start-2">
+          <div className="col-span-3 col-start-2 bg-gray-100">
         <Outlet />
       </div>
     </main>
