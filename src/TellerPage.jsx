@@ -5,7 +5,7 @@ import razzy from "./assets/images/razzy.jpg";
 const TellerPage = () => {
   return (
     <main className="grid grid-cols-4">
-       <aside className="col-span-1 h-screen bg-gray-200 p-5">
+       <aside className="col-span-1 h-screen bg-gray-200 p-5 min-h-full">
       <h1 className="text-2xl font-medium mb-8 text-center">SpeedPay</h1>
       <div className="ml-[-10px] flex flex-col items-center mb-5">
             <div className="rounded-full">

@@ -72,11 +72,11 @@ import InvoiceTable from './InvoiceTable';
 const InvoiceDetails = () => {
   const location = useLocation();
 
-  const isCashRoute = location.pathname.includes('cash');
+  const isPaymentRoute = location.pathname.includes('cash') || location.pathname.includes('mobilemoney');
 
   return (
     <div className="w-full pb-4">
-      {!isCashRoute ? (
+      {!isPaymentRoute ? (
         <div>
           <h1 className="text-center text-[15px] font-medium mb-5">Invoice Details</h1>
           <div className="border-1 border-gray-300 p-4 rounded-lg">
@@ -126,9 +126,11 @@ const InvoiceDetails = () => {
                   Cash
                 </button>
               </Link>
+              <Link to="mobilemoney">
               <button className="bg-slate-900 w-[170px] text-white rounded py-1 text-[13px] font-medium">
                 Mobile Money
               </button>
+              </Link>
               <button className="bg-slate-900 w-[170px] text-white rounded py-1 text-[13px] font-medium">
                 UMB Cheque
               </button>

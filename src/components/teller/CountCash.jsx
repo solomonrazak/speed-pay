@@ -1,9 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import { Input } from "@nextui-org/react";
+import Receipt from "./receipt/Receipt";
+
 
 const CountCash = () => {
+    const [showReceipt, setShowReceipt] = useState(false);
+    const [hideCash, setHideCash] = useState(false);
+
+
   return (
     <div>
+        {!hideCash && 
+        <div>
       <h1 className="text-center font-medium">Count Cash</h1>
       <div className="flex justify-center gap-16">
         <div>
@@ -164,10 +172,18 @@ const CountCash = () => {
           radius="none"
           className="max-w-xs bg-white"
         />
-        <button className="bg-slate-950 text-white w-[20rem] px-2 py-1">
+        <button className="bg-slate-950 text-white w-[20rem] px-2 py-1" onClick={() => {setShowReceipt(true); setHideCash(true);}}>
           Continue
         </button>
       </div>
+
+      </div>
+}
+      {showReceipt && 
+      <div>
+        <Receipt />
+      </div>
+}
     </div>
   );
 };

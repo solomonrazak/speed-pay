@@ -16,6 +16,7 @@ import SetupZone from './components/admin/SetupZone';
 import Services from './components/admin/Services';
 import Reports from './components/admin/Reports';
 import CountCash from './components/teller/CountCash'; // Import CountCash
+import Momo from './components/teller/Momo';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,6 +38,7 @@ function App() {
           <Route path="tell-overview" element={<TellOverview />} />
           <Route path="payments" element={<Payments />}>
             <Route path="cash" element={<CountCash />} /> {/* Nested route */}
+            <Route path="mobilemoney" element={<Momo />} />
           </Route>
           <Route path="generator" element={<Generator />} />
           <Route path="tell-reports" element={<TellReports />} />
