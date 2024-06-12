@@ -17,7 +17,7 @@ function Home() {
     
     <div className='flex gap-4'>
       <button className='bg-slate-900 text-white px-3 py-1 rounded-md font-medium'><Link to="/adminlogin">Admin</Link></button>
-      <button className='bg-slate-900 text-white px-3 py-1 rounded-md font-medium'><Link to="/implantlogin">Implant Teller</Link></button>
+      <button className='bg-slate-900 text-white px-3 py-1 rounded-md font-medium'><Link to="/implantlogin">Teller</Link></button>
     </div>
    </div>
   )

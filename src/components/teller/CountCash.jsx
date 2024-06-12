@@ -125,7 +125,7 @@ const CountCash = () => {
                   <p className="text-gray-400">0.20</p>
                   <p>0</p>
                 </div>
-                <div className="bg-gray-400 h-full ml-[8.3rem] w-[0.5px]"></div>
+                <div className="bg-gray-400 h-full ml-[7.8rem] w-[0.5px]"></div>
                 <p>0</p>
               </div>
               <div className="flex w-72 h-12 border-1 border-gray-400 bg-white justify-between items-center px-2 rounded-md">
@@ -133,7 +133,7 @@ const CountCash = () => {
                   <p className="text-gray-400">0.10</p>
                   <p>0</p>
                 </div>
-                <div className="bg-gray-400 h-full ml-[8.5rem] w-[0.5px]"></div>
+                <div className="bg-gray-400 h-full ml-[7.8rem] w-[0.5px]"></div>
                 <p>0</p>
               </div>
               <div className="flex w-72 h-12 border-1 border-gray-400 bg-white justify-between items-center px-2 rounded-md">
@@ -141,7 +141,7 @@ const CountCash = () => {
                   <p className="text-gray-400">0.05</p>
                   <p>0</p>
                 </div>
-                <div className="bg-gray-400 h-full ml-[9rem] w-[0.5px]"></div>
+                <div className="bg-gray-400 h-full ml-[7.8rem] w-[0.5px]"></div>
                 <p>0</p>
               </div>
               <div className="flex w-72 h-12 border-1 border-gray-400 bg-white justify-between items-center px-2 rounded-md">
@@ -149,7 +149,7 @@ const CountCash = () => {
                   <p className="text-gray-400">0.01</p>
                   <p>0</p>
                 </div>
-                <div className="bg-gray-400 h-full ml-[9rem] w-[0.5px]"></div>
+                <div className="bg-gray-400 h-full ml-[7.8rem] w-[0.5px]"></div>
                 <p>0</p>
               </div>
               <div className="flex w-72 h-12  bg-transparent justify-between items-center px-2 rounded-md">

@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import razzy from "./assets/images/razzy.jpg";
 
 const TellerPage = () => {
+  const location = useLocation();
+  
+  const isActive = (path) => location.pathname === `/teller-page/${path}`;
   return (
     <main className="grid grid-cols-4">
        <aside className="col-span-1 h-screen bg-gray-200 p-5 min-h-full">
@@ -23,19 +26,40 @@ const TellerPage = () => {
           <div className="flex justify-center">
           <ul className="flex flex-col justify-center">
             <li className="mb-3">
-              <Link to="tell-overview" className="text-blue-500">Overview</Link>
+              <Link to="tell-overview"  className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer text-blue-600 ${
+                isActive("tell-overview")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}
+            >Overview</Link>
             </li>
             <li className="mb-3">
-              <Link to="payments" className="text-blue-500">Bill Payments</Link>
+              <Link to="payments" className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer text-blue-600 ${
+                isActive("payments")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}>Bill Payments</Link>
             </li>
             <li className="mb-3">
-              <Link to="generator" className="text-blue-500">Bill Generator</Link>
+              <Link to="generator" className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer text-blue-600 ${
+                isActive("generator")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}>Bill Generator</Link>
             </li>
             <li className="mb-3">
-              <Link to="tell-reports" className="text-blue-500">Reports</Link>
+              <Link to="tell-reports" className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer text-blue-600 ${
+                isActive("tell-reports")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}>Reports</Link>
             </li>
             <li className="mb-3">
-              <Link to="tell-profile" className="text-blue-500">Profile</Link>
+              <Link to="tell-profile" className={`mb-3 px-2 py-1 ml-[-8px] rounded-md cursor-pointer text-blue-600 ${
+                isActive("tell-profile")
+                  ? "bg-gray-400 text-slate-900 font-medium"
+                  : "hover:bg-gray-300 hover:text-slate-900"
+              }`}>Profile</Link>
             </li>
           </ul>
           </div>
