@@ -1,8 +1,11 @@
 import React from 'react'
+import Reports from '../admin/Reports'
 
 const TellReports = () => {
   return (
-    <div>TellReports</div>
+    <div className="p-8">
+      <Reports />
+    </div>
   )
 }
 

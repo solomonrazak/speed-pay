@@ -158,7 +158,7 @@ const Receipt = () => {
                           src={Vector}
                           width={20}
                           height={20}
-                          className="object-fit"
+                          className="object-contain"
                         />
                       </div>
                     </div>
