@@ -29,7 +29,7 @@ export default function Approver() {
             <td className="px-6 py-2">DEPT 1</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
-          {/* Repeat the above tr block for each row in the table */}
+         
           <tr key={1} className="border border-solid border-l-0 border-r-0 text-[12px]">
             <td className="px-6 py-2">27.05.2024</td>
             <td className="px-6 py-2">JANE</td>

@@ -31,7 +31,7 @@ export default function Failed() {
             <td className="px-3 py-2">GHC1500.00</td>
             <td><div className="flex flex-row items-center text-[18px]"><RiArrowDropDownLine /><PiDotsThreeOutlineVerticalThin /></div></td>
           </tr>
-          {/* Repeat the above tr block for each row in the table */}
+        
           <tr key={1} className="border border-solid border-l-0 border-r-0 text-[12px]">
           <td className="px-3 py-2"><div className="text-red-500 bg-red-200 rounded-large px-1 text-center py-1 ">Failed</div></td>
             <td className="px-3 py-2">27.05.2024</td>
